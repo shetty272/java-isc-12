@@ -117,10 +117,47 @@ public class Linklist
 
             }
 
+        
             
-          
 
      }
+        public void deletenode (int t)
+        {
+               if (head==null)
+               {
+                    System.out.println("The  linklist  is empty ");
+               }
+
+               if (head.data==t)
+               {
+                   head=head.link;
+                   System.out.println("node" +  t + "deleted form thhe begining");
+
+
+
+               }
+                 Node current = head;
+                 Node prev = null;
+
+               while (current!=null&& current.data!=t)
+               {
+                    prev = current;
+                    current= current.link;
+               }
+
+
+               if (current== null)
+               {
+                    System.out.println("sorry node "+t+" was not found  ");
+               }
+
+             prev.link =   current.link;
+
+             System.out.println("node "+t+"is gone ");
+                    
+     
+        }
+
 
           void display ()
         {
@@ -161,7 +198,7 @@ public class Linklist
         while (true) 
         {
              
-          System.out.println("1.Insert node at the beginning \n2.Insert node at a specified position \n3. Insert node at the end\n4.display\n5.search\n6.exit");
+          System.out.println("1.Insert node at the beginning \n2.Insert node at a specified position \n3. Insert node at the end\n4.display\n5.search\n6.delete node\n7.exit");
           System.out.println("enter your  choice ");
           choice = in.nextInt();
 
@@ -216,9 +253,17 @@ public class Linklist
                    break;
 
 
+                   case 6:
+                   System.out.println("enter the node to be deleted ");
+                   t = in.nextInt();
+                   ob.deletenode(t);
+                   break;
 
 
-                case 6:
+
+
+
+                case 7:
                 System.out.println("nothing too see ");
                 System.exit(0);
 

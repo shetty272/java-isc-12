@@ -3,7 +3,7 @@ public class dayproram {
 
     public static void main(String[] args) {
         
-        Sc
+         Scanner sc = in S
     }
 
 }

@@ -55,15 +55,13 @@ public class CardGame{
        }
 ;
        public static void main(String[] args) {
-           int cc  ;
+           int cc;
 
           Scanner in = new Scanner(System.in);
            System.out.println("enter your capcity ");
 
           cc = in.nextInt();
-          CardGame ob = new CardGame(cc);
-
-          
+          CardGame ob = new CardGame(cc);  
 
           while (true) {
 
@@ -71,11 +69,13 @@ public class CardGame{
             System.out.println("enter your choice ");
             int choice = in.nextInt();
              switch (choice) {
+
                 case 1:
                 System.out.println("enter te card value ");
                 int v = in.nextInt();
                 ob.addCard(v);
                 break;
+
                 case 2:
                 int d = ob.drawCard();
 

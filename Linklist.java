@@ -133,9 +133,6 @@ public class Linklist
                {
                    head=head.link;
                    System.out.println("node" +  t + "deleted form thhe begining");
-
-
-
                }
                  Node current = head;
                  Node prev = null;
@@ -152,7 +149,7 @@ public class Linklist
                     System.out.println("sorry node "+t+" was not found  ");
                }
 
-             prev.link =   current.link;
+             prev.link =current.link;
 
              System.out.println("node "+t+"is gone ");
                     
